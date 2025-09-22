@@ -56,25 +56,25 @@ Core functionality includes intelligent career goal setting with progress tracki
 ## Screenshots
 
 ### Home Screen
-<img src="screenshots/home_screen.png" alt="Home Screen" width="300">
+<img src="CareerCompass/screenshots/home_screen.png" alt="Home Screen" width="300">
 
 ### Career Goals
-<img src="screenshots/career_goals.png" alt="Career Goals" width="300">
+<img src="CareerCompass/screenshots/career_goals.png" alt="Career Goals" width="300">
 
 ### Resume Builder
-<img src="screenshots/resume_builder.png" alt="Resume Builder" width="300">
+<img src="CareerCompass/screenshots/resume_builder.png" alt="Resume Builder" width="300">
 
 ### Skill Gap Analysis
-<img src="screenshots/skill_gap.png" alt="Skill Gap Analysis" width="300">
+<img src="CareerCompass/screenshots/skill_gap.png" alt="Skill Gap Analysis" width="300">
 
 ### Interview Prep
-<img src="screenshots/interview_prep.png" alt="Interview Prep" width="300">
+<img src="CareerCompass/screenshots/interview_prep.png" alt="Interview Prep" width="300">
 
 ### Cover Letter Generator
-<img src="screenshots/cover_letter.png" alt="Cover Letter Generator" width="300">
+<img src="CareerCompass/screenshots/cover_letter.png" alt="Cover Letter Generator" width="300">
 
 ### Dashboard
-<img src="screenshots/dashboard.png" alt="Cover Letter Generator" width="300">
+<img src="CareerCompass/screenshots/dashboard.png" alt="Cover Letter Generator" width="300">
 
 ### Account Center
-<img src="screenshots/account_center.png" alt="Cover Letter Generator" width="300">
+<img src="CareerCompass/screenshots/account_center.png" alt="Cover Letter Generator" width="300">
