@@ -1,0 +1,28 @@
+name: Build App
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-app:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Cache Gradle Dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.gradle
+          key: gradle-${{ hashFiles('**/*.gradle*') }}
+      - name: Make Gradle Executable
+        run: chmod +x ./gradlew
+      - name: Build & Debug APK
+        run: ./gradlew assembleDebug --parallel --build-cache --configure-on-demand -x test -x lint

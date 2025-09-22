@@ -1,0 +1,60 @@
+\documentclass[12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}            % for proper font encoding
+\usepackage[empty]{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{eso-pic}
+\usepackage{charter}
+
+% Fancy signature font
+\usepackage{calligra}               % calligraphic font
+\usepackage{amsmath}                % for \text command if needed
+
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+\definecolor{gr}{RGB}{225,225,225}
+
+\begin{document}
+
+% Shaded header banner
+\AddToShipoutPictureBG{%
+  \color{gr}
+  \AtPageUpperLeft{\rule[-1.3in]{\paperwidth}{1.3in}}
+}
+
+% Header
+\begin{center}
+  {\fontsize{28}{0}\selectfont\scshape <<sender_name>>}
+
+  <% if sender_email %>\href{mailto:<<sender_email>>}{\faEnvelope\enspace <<sender_email>>}<% endif %><% if sender_linkedin and sender_email %>\hfill<% endif %>
+  <% if sender_linkedin %>\href{<<sender_linkedin>>}{\faLinkedinIn\enspace <<sender_linkedin>>}<% endif %><% if sender_phone and (sender_email or sender_linkedin) %>\hfill<% endif %>
+  <% if sender_phone %>\href{tel:<<sender_phone>>}{\faPhone\enspace <<sender_phone>>}<% endif %>
+\end{center}
+
+\vspace{0.2in}
+
+% Opening block
+<<date>>\\
+
+\vspace{-0.1in}\textbf{Dear Hiring Manager,}\\
+
+% Body
+\vspace{-0.1in}\setlength\parindent{24pt}
+\noindent
+<<body>>
+
+\vspace{0.1in}
+\vfill
+
+\begin{flushright}
+Sincerely,
+
+\vspace{-0.1in}
+% Use Calligra at a larger size for a handwritten look:
+{\LARGE\calligra <<sender_name>>}\\[1ex]
+<% if position %><<position>> Applicant<% else %>Applicant<% endif %>
+\end{flushright}
+
+\end{document}
